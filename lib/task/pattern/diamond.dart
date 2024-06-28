@@ -1,32 +1,30 @@
 import 'dart:io';
-void main()
+ void  main()
 {
   double i,j,k;
-  print("Enter the row : ");
+  stdout.write("Enter the row:");
   double row = double.parse(stdin.readLineSync()!);
-  for(i=1;i<=row;i++)
-  {
-    for(j=1;j<=(row-i);j++)
+  for(i=1;i<=row;i++) {
+    for (j = 1; j <= (row - i); j++)
     {
       stdout.write(" ");
     }
-    for(k=1;k<=row+1;k++)
-    {
-      stdout.write("*");
-    }
-    stdout.write("\n");
-    }
-  for(i=2;i<=row;i++)
-  {
-    for(j=2;j<=i;j++)
-    {
-      stdout.write(" ");
-    }
-    for(k=1;k<=row+1;k++)
+    for (k = 1; k <= ((i * 2) - 1); k++)
     {
       stdout.write("*");
     }
     stdout.write("\n");
   }
-
+  for(i=row-1;i>=1;i--)
+  {
+    for (j = 1; j <= (row - i); j++)
+    {
+      stdout.write(" ");
+    }
+    for (k = 1; k <= ((i * 2) - 1); k++)
+    {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
 }
